@@ -1,6 +1,9 @@
 function FirtsCode(){
 	return (
+		<>
 		<h2>code is ready</h2>
+		<h2>hello world</h2>
+		</>
 	)
 }
 
