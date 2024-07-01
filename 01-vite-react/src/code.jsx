@@ -1,6 +1,8 @@
 function FirstCode(){
 	return(
+		<>
 		<h2>learning React</h2>
+		</>
 	)
 }
 

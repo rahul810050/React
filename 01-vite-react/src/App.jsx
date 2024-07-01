@@ -2,11 +2,11 @@ import FirstCode from "./code"
 
 
 function App() {
+  const username = 'rahul'
   return (
     <>
     <FirstCode/>
-    <h1>code is ready</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil magnam itaque necessitatibus. Voluptate iure accusantium porro quam voluptatibus, molestias debitis dignissimos ducimus quia consequuntur asperiores eveniet nisi quos officia temporibus!</p>
+    <h1>code is ready, {username}</h1> {/*this is the way to pass variable this is an evaluated expression */}
     </>
     
   )
