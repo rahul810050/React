@@ -1,4 +1,4 @@
-function FirtsCode(){
+function FirstCode(){
 	return (
 		<>
 		<h2>code is ready</h2>
@@ -7,4 +7,4 @@ function FirtsCode(){
 	)
 }
 
-export default FirtsCode
+export default FirstCode

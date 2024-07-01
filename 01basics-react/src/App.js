@@ -1,9 +1,9 @@
-import FirtsCode from "./Code";
+import FirstCode from "./Code";
 
 function App() {
   return (
     
-    <FirtsCode/>
+    <FirstCode/>
   );
 }
 
