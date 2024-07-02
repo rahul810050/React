@@ -10,6 +10,14 @@ function App() {
     if(counter <= 19){
       // counter++
       setCounter(counter + 1)
+      /*setCounter(counter + 1)
+      setCounter(counter + 1)  // this is not the right way to this...because fiber takes the banch of instruction send it to server for work done but before that fiber checks all the instruction of work if it does the same thing then fiber takes only a single work of instruction and rest are ignored
+      setCounter(counter + 1)*/
+
+      // this is the way to do same work again and again.. because we are taking only the previous state of rather taking banch of it 
+      // setCounter((prevCounter) => {return prevCounter + 1}) // another syntax to do it
+      // setCounter(prevCounter => prevCounter + 1)
+      // setCounter(prevCounter => prevCounter + 1)
     }
   }
   const removeCount = ()=>{
