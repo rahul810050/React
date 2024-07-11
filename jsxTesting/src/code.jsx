@@ -1,11 +1,11 @@
-import { jsx as _jsx } from 'react/jsx-runtime';
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';
 
 const MyComponent = () => {
   return (
-    _jsx('div', { className: 'my-container' },
-      _jsx('h1', { className: 'title' }, 'Hello, React!'),
-      _jsx('p', null, 'This is a simple example using _jsx from react/jsx-runtime.')
-    )
+    _jsxs('div', { className: 'my-container', children: [
+      _jsx('h1', { className: 'title', children: 'Hello, React!' }),
+      _jsx('p', { children: 'This is a simple example using _jsx from react/jsx-runtime.' })
+    ]})
   );
 };
 
