@@ -8,7 +8,6 @@
 //   return (
 //     <>
 //       <BrowserRouter>
-        
 //         <Routes>
 //           <Route path='/' element={<Layout/>}>
 //             <Route path='class11' element={<Class11/>}/> 
@@ -21,6 +20,7 @@
 //     </>
 //   )
 // }
+
 
 // function ErrorPage(){
 //   return (
