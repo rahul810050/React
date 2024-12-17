@@ -67,18 +67,64 @@ function useCounter(){
 
 // THIS APP FUNCTION IS TO USE THE usePrev HOOK
 
+// function App(){
+//   const [value, setValue] = useState(0)
+//   const previous = usePrev(value)
+
+
+//   return(
+//     <div>
+//       <p>{value}</p>
+//       <button onClick={()=> setValue(c=> c+1)}>Increase</button>
+//       <p>The previous value is: {previous}</p>
+//     </div>
+//   )
+// }
+
+
+
+
+
+// DEBOUNCING IN REACT
+
 function App(){
-  const [value, setValue] = useState(0)
-  const previous = usePrev(value)
+  const [inputVal, setInputVal] = useState("")
 
+  // async function callBackend(){
+  //   const data = await fetch('api.amazon.in/search/value');
+  // }
 
-  return(
-    <div>
-      <p>{value}</p>
-      <button onClick={()=> setValue(c=> c+1)}>Increase</button>
-      <p>The previous value is: {previous}</p>
-    </div>
-  )
+  const debounce = useDebounce(inputVal, 200);
+
+  useEffect(()=> {
+    console.log('backend request sent')
+  }, [debounce])
+
+  function useDebounce(value, delay){
+    const [debouncedValue, setDebouncedValue] = useState();
+  
+    useEffect(()=> {
+      const interval = setTimeout(() => {
+        setDebouncedValue(value)
+      }, delay);
+  
+      return ()=> {
+        clearTimeout(interval)
+      }
+    }, [value, delay])
+  
+    return debouncedValue
+  }
+
+  function change(e){
+    setInputVal(e.target.value)
+  }
+
+  return <div>
+    <input type="text" onChange={change} />
+  </div>
 }
+
+
 
 export default App
